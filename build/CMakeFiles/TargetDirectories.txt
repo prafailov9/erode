@@ -1,3 +1,0 @@
-C:/dev/erode/build/CMakeFiles/erode.dir
-C:/dev/erode/build/CMakeFiles/edit_cache.dir
-C:/dev/erode/build/CMakeFiles/rebuild_cache.dir
