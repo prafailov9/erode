@@ -1,6 +1,6 @@
 /.cache/
 
-/build/
+build/
 test_log*
 .clangd
 .vscode/

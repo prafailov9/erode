@@ -30,7 +30,7 @@ int main() {
   const int SCALE = 5;
 
   const int W = 2560 / SCALE, H = 1440 / SCALE;
-  const int MAX_FPS = 120;
+  const int MAX_FPS = 70;
   const int SIM_W = W * SCALE; // pixel width of the simulation area
   const int SIM_H = H * SCALE;
 

@@ -1,7 +1,6 @@
 #include "Grid.h"
 #include "velocity/Velocity.h"
 #include <algorithm>
-#include <cstdio>
 #include <cstdlib>
 
 Grid::Grid(int width, int height)
@@ -381,7 +380,7 @@ void Grid::spreadFire(int i, int x, int y) {
     } else {
       // oil / gunpowder: damage lifetime until it ignites
       if (cells[j].lifetime > 0)
-        cells[j].lifetime -= 5;
+        cells[j].lifetime -= 10;
     }
   }
 }
@@ -468,8 +467,7 @@ void Grid::dissolve(int i, int x, int y) {
       set(ax, ay, CellType::AIR);
       acid->updated = true;
     } else {
-      acid->lifetime--;
-      // set the prev acid pos, now air, as updated
+      acid->lifetime -= 10;
     }
     cells[i].updated = true;
     // spawn fumes during dissolve
@@ -587,7 +585,7 @@ void Grid::set(int x, int y, CellType type) {
     cells[y * width + x].g = jitter(111, 10);
     cells[y * width + x].b = jitter(51, 8);
     cells[y * width + x].velocity = {0.0f, 0.0f};
-    cells[y * width + x].remVel = {12.0f, 0.0f}; // charring counter
+    cells[y * width + x].remVel = {3.0f, 0.0f}; // charring counter
     cells[y * width + x].lifetime =
         25; // burn duration — tune to control chain length
     break;
