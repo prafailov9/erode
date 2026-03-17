@@ -6,3 +6,4 @@ test_log*
 .vscode/
 
 run.ps1
+compile_commands.json
