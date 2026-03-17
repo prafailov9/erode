@@ -5,9 +5,24 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# ── Source files ──────────────────────────────────────────────────────────────
-add_executable(erode
-    src/main.cpp
+# ── GoogleTest ────────────────────────────────────────────────────────────────
+include(FetchContent)
+
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+)
+
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+# ── Find SFML ─────────────────────────────────────────────────────────────────
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
+
+# ── Library (shared code) ─────────────────────────────────────────────────────
+add_library(erode_lib
     src/Grid.cpp
     src/Renderer.cpp
     src/InputHandler.cpp
@@ -15,24 +30,30 @@ add_executable(erode
     src/velocity/Velocity.cpp
 )
 
-# ── Find SFML ─────────────────────────────────────────────────────────────────
-# Set SFML_DIR (or CMAKE_PREFIX_PATH) to your SFML 3 install, e.g.:
-#   cmake -DSFML_DIR="C:/SFML-3/lib/cmake/SFML" ..
-# or install via vcpkg and use its toolchain file.
-find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
+target_include_directories(erode_lib PUBLIC src)
 
-target_link_libraries(erode PRIVATE
+target_link_libraries(erode_lib PUBLIC
     SFML::Graphics
     SFML::Window
     SFML::System
 )
 
-# ── Include dirs ──────────────────────────────────────────────────────────────
-target_include_directories(erode PRIVATE src)
+# ── Main executable ───────────────────────────────────────────────────────────
+add_executable(erode src/main.cpp)
 
-# ── Optional: copy assets next to the binary ─────────────────────────────────
-# Uncomment when you add an assets/ folder
-# add_custom_command(TARGET erode POST_BUILD
-#     COMMAND ${CMAKE_COMMAND} -E copy_directory
-#     ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:erode>/assets
-# )
+target_link_libraries(erode PRIVATE
+    erode_lib
+)
+
+# ── Tests ─────────────────────────────────────────────────────────────────────
+add_executable(erode_tests
+    tests/GridTest.cpp
+)
+
+target_link_libraries(erode_tests PRIVATE
+    erode_lib
+    gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(erode_tests)
