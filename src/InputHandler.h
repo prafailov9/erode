@@ -10,11 +10,11 @@ public:
 
   CellType activeTool = CellType::SAND; // cycle with number keys
   int brushSize = 8;                    // radius in cells
-  float spawnChance = 0.08f;            // fraction of brush cells filled per frame
+  float spawnChance = 0.08f; // fraction of brush cells filled per frame
 
 private:
-  Grid  &grid;
+  Grid &grid;
   Panel &panel;
-  int    scale;
+  int scale;
   void paint(int cx, int cy);
 };

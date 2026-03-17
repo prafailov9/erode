@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(erode)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# ── Set module path for finding dependencies ──────────────────────────────────
-list(APPEND CMAKE_PREFIX_PATH /usr /usr/local /opt/local)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # ── Source files ──────────────────────────────────────────────────────────────
 add_executable(erode
@@ -18,14 +16,15 @@ add_executable(erode
 )
 
 # ── Find SFML ─────────────────────────────────────────────────────────────────
-# Looks for SFML installed via your package manager or a local install.
-# Requires: Graphics, Window, System components.
-find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
+# Set SFML_DIR (or CMAKE_PREFIX_PATH) to your SFML 3 install, e.g.:
+#   cmake -DSFML_DIR="C:/SFML-3/lib/cmake/SFML" ..
+# or install via vcpkg and use its toolchain file.
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
-target_link_libraries(erode
-    sfml-graphics
-    sfml-window
-    sfml-system
+target_link_libraries(erode PRIVATE
+    SFML::Graphics
+    SFML::Window
+    SFML::System
 )
 
 # ── Include dirs ──────────────────────────────────────────────────────────────

@@ -1,6 +1,7 @@
 #pragma once
 #include "Grid.h"
 #include <SFML/Graphics.hpp>
+#include <cstdint>
 
 class Renderer {
 public:
@@ -18,7 +19,8 @@ private:
 
   sf::Texture baseTex;
   sf::Sprite baseSprite;
-  std::vector<sf::Uint8> pixels; // RGBA — base scene, bloom merged in before upload
+  std::vector<std::uint8_t>
+      pixels; // RGBA — base scene, bloom merged in before upload
 
   std::vector<float> bloomBuf; // RGB float (ping)
   std::vector<float> blurTmp;  // RGB float (pong)

@@ -1,38 +1,38 @@
 [
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/main.cpp.o -c /home/r99unix/dev/c_projects/erode/src/main.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/main.cpp",
-  "output": "CMakeFiles/erode.dir/src/main.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\main.cpp.obj -c C:\\dev\\erode\\src\\main.cpp",
+  "file": "C:/dev/erode/src/main.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/main.cpp.obj"
 },
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/Grid.cpp.o -c /home/r99unix/dev/c_projects/erode/src/Grid.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/Grid.cpp",
-  "output": "CMakeFiles/erode.dir/src/Grid.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\Grid.cpp.obj -c C:\\dev\\erode\\src\\Grid.cpp",
+  "file": "C:/dev/erode/src/Grid.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/Grid.cpp.obj"
 },
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/Renderer.cpp.o -c /home/r99unix/dev/c_projects/erode/src/Renderer.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/Renderer.cpp",
-  "output": "CMakeFiles/erode.dir/src/Renderer.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\Renderer.cpp.obj -c C:\\dev\\erode\\src\\Renderer.cpp",
+  "file": "C:/dev/erode/src/Renderer.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/Renderer.cpp.obj"
 },
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/InputHandler.cpp.o -c /home/r99unix/dev/c_projects/erode/src/InputHandler.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/InputHandler.cpp",
-  "output": "CMakeFiles/erode.dir/src/InputHandler.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\InputHandler.cpp.obj -c C:\\dev\\erode\\src\\InputHandler.cpp",
+  "file": "C:/dev/erode/src/InputHandler.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/InputHandler.cpp.obj"
 },
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/Panel.cpp.o -c /home/r99unix/dev/c_projects/erode/src/Panel.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/Panel.cpp",
-  "output": "CMakeFiles/erode.dir/src/Panel.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\Panel.cpp.obj -c C:\\dev\\erode\\src\\Panel.cpp",
+  "file": "C:/dev/erode/src/Panel.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/Panel.cpp.obj"
 },
 {
-  "directory": "/home/r99unix/dev/c_projects/erode/build",
-  "command": "/usr/bin/c++  -I/home/r99unix/dev/c_projects/erode/src -g -std=gnu++17 -o CMakeFiles/erode.dir/src/velocity/Velocity.cpp.o -c /home/r99unix/dev/c_projects/erode/src/velocity/Velocity.cpp",
-  "file": "/home/r99unix/dev/c_projects/erode/src/velocity/Velocity.cpp",
-  "output": "CMakeFiles/erode.dir/src/velocity/Velocity.cpp.o"
+  "directory": "C:/dev/erode/build",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/erode/src -isystem C:/dev/vcpkg/installed/x64-windows/include -O0 -g -Xclang -gcodeview -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles\\erode.dir\\src\\velocity\\Velocity.cpp.obj -c C:\\dev\\erode\\src\\velocity\\Velocity.cpp",
+  "file": "C:/dev/erode/src/velocity/Velocity.cpp",
+  "output": "C:/dev/erode/build/CMakeFiles/erode.dir/src/velocity/Velocity.cpp.obj"
 }
 ]

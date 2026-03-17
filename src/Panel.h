@@ -1,6 +1,7 @@
 #pragma once
 #include "Grid.h"
 #include <SFML/Graphics.hpp>
+#include <optional>
 #include <vector>
 
 class Panel {
@@ -27,11 +28,10 @@ private:
   bool isDraggingSlider = false;
   const float SWATCH_W = 28.f;
 
-  sf::Font font;
-  bool fontLoaded = false;
+  std::optional<sf::Font> font;
 
   sf::RectangleShape bg;
-  sf::Text header;
+  std::optional<sf::Text> header;
 
   struct Button {
     CellType type;
@@ -40,7 +40,7 @@ private:
     sf::RectangleShape outline;
     sf::RectangleShape swatch;
     sf::RectangleShape body;
-    sf::Text label;
+    std::optional<sf::Text> label;
   };
   std::vector<Button> buttons;
 
@@ -53,7 +53,7 @@ private:
   Slider sizeSlider;
   sf::RectangleShape sliderTrack;
   sf::RectangleShape sliderHandle;
-  sf::Text sizeLabel;
+  std::optional<sf::Text> sizeLabel;
 
   static sf::Color colorFor(CellType t);
   void updateSliderHandle();
