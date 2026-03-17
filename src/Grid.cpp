@@ -12,7 +12,7 @@ void Grid::update(float dt) {
     cell.updated = false;
 
   for (int y = height - 1; y >= 0; y--) {
-    // make sure no horizontal bias for fluids
+    // make sure no horizontal bias
     bool leftToRight = rand() % 2;
     for (int xi = 0; xi < width; xi++) {
       // alternate direction
