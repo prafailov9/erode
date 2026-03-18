@@ -63,16 +63,16 @@ private:
   std::vector<Cell> cells; // flat: index = y * width + x
   static constexpr int density[] = {
       0, // AIR
-      4, // SAND
-      3, // WATER
+      5, // SAND
+      4, // WATER
       5, // DIRT
       1, // FIRE
       1, // SMOKE
       5, // GUNPOWDER
-      5, // WOOD
+      6, // WOOD
       2, // ACID
       3, // OIL
-      5, // STONE
+      7, // STONE
   };
 
   // all 8 neighbors helper index array

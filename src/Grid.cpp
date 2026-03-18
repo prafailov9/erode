@@ -168,7 +168,11 @@ void Grid::oilRules(int i, int x, int y, float dt) {
   cells[i].r = 188 + (rand() % 16 - 8);
   cells[i].g = 148 + (rand() % 16 - 8);
   cells[i].b = 88 + (rand() % 16 - 8);
-  moveFluid(i, x, y, dt);
+  int fi = moveFluid(i, x, y, dt);
+
+  if (cells[fi].type != CellType::OIL)
+    return;
+
   for (int k = 0; k < 8; k++) {
     int nx = x + rand() % 2; // favor horizontal
     int ny = y + rand() % 3 - 1;
@@ -180,18 +184,6 @@ void Grid::oilRules(int i, int x, int y, float dt) {
       break;
     }
   }
-  // for (auto [dx, dy] :
-  //  std::vector<std::pair<int, int>>{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}) {
-  // int nx = x + dx;
-  // int ny = y + dy;
-  // if (inBounds(nx, ny) && get(nx, ny).type == CellType::FIRE &&
-  // canIgnite(i)) {
-  // set(x, y, CellType::FIRE);
-  // cells[i].lifetime = 30 + rand() % 60;
-  // cells[i].updated = true;
-  // break;
-  // }
-  // }
 }
 
 void Grid::woodRules(int i, int x, int y, float dt) {
