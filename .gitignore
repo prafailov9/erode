@@ -7,3 +7,5 @@ test_log*
 
 run.ps1
 compile_commands.json
+
+.claude/

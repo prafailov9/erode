@@ -17,6 +17,16 @@ enum class CellType {
   STONE
 };
 
+// TODO: finish SoA implementation
+struct Cells {
+  std::vector<CellType> particles;
+  std::vector<bool> updated;
+  std::vector<uint8_t> lifetime;
+  std::vector<uint8_t> vx;
+  std::vector<int8_t> vy;
+  std::vector<uint8_t> remVy;
+};
+
 const float GRAVITY_VALUE = 20.f;
 const float MIN_VEL_CLAMP = -10.f;
 const float MAX_VEL_CLAMP = 10.f;
