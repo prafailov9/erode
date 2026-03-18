@@ -61,6 +61,7 @@ public:
 
 private:
   std::vector<Cell> cells; // flat: index = y * width + x
+  Cells particles;
   static constexpr int density[] = {
       0, // AIR
       5, // SAND
